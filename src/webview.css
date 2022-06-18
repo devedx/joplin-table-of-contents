@@ -1,0 +1,29 @@
+html, body, div {
+	height: 100%;
+}
+
+div.container {
+	padding-top: 10px;
+	background-color: var(--joplin-odd-background-color);
+}
+
+a.toc {
+	color: var(--joplin-color);
+	font-size: var(--joplin-font-size);
+	text-decoration: none;
+}
+
+div.toc {
+	height: auto;
+	margin: 0 0 -7px 13px;
+}
+
+summary.toc {
+	margin-bottom: 7px;
+	cursor: pointer;
+}
+
+div.toc-nesting {
+	height: auto;
+	margin: 0 0 0 13px;
+}
