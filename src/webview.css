@@ -5,6 +5,7 @@ html, body, div {
 div.container {
 	padding-top: 10px;
 	background-color: var(--joplin-odd-background-color);
+	overflow-y: auto;
 }
 
 a.toc {
@@ -26,4 +27,30 @@ summary.toc {
 div.toc-nesting {
 	height: auto;
 	margin: 0 0 0 13px;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-corner {
+	background: none;
+}
+
+::-webkit-scrollbar-track {
+	border: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(100, 100, 100, 0.3);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(100, 100, 100, 0.7);
 }
