@@ -175,13 +175,14 @@ function escapeHtml(unsafe: string) {
 		.replace(/>/g, "&gt;")
 		.replace(/"/g, "&quot;")
 		.replace(/'/g, "&#039;")
-		.replace(/\$(.*)\$/g, (_, p1, ...args) => convertKatex(p1));
+		.replace(/\$([^\$]*)\$/g, (match, p1, ...args) => convertKatex(p1));
 }
 
 function convertKatex(s: string) {
+	console.log(s);
 	return katex.renderToString(s, { throwOnError: false, output: "html" });
 }
 
 function removeLaTeXMath(unsafe: string) {
-	return unsafe.replace(/\$.*\$/g, "")
+	return unsafe.replace(/\$[^\$]*\$/g, "")
 }
