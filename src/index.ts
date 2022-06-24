@@ -179,7 +179,6 @@ function escapeHtml(unsafe: string) {
 }
 
 function convertKatex(s: string) {
-	console.log(s);
 	return katex.renderToString(s, { throwOnError: false, output: "html" });
 }
 
